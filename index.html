@@ -63,19 +63,19 @@
 	// Update content based on time of day
 		if (currentHour >= 5 && currentHour < 12) {
 			messageElement.textContent = "Good Morning!";
-			imageElement.src = "morning_image.jpg";
+			imageElement.src = "images/morning.jpeg";
 			document.body.style.backgroundColor = "#ffff00";
 		} else if (currentHour >= 12 && currentHour < 18) {
 			messageElement.textContent = "Good Afternoon!";
-			imageElement.src = "afternoon_image.jpg";
+			imageElement.src = "images/afternoon.jpeg";
 			document.body.style.backgroundColor = "#87ceeb";
 		} else if (currentHour >= 18 && currentHour < 23) {
 			messageElement.textContent = "Good Evening!";
-			imageElement.src = "evening_image.jpg";
+			imageElement.src = "images/evening.jpeg";
 			document.body.style.backgroundColor = "#e6e6fa";
 		} else {
 			messageElement.textContent = "Good Night!";
-			imageElement.src = "night_image.jpg";
+			imageElement.src = "images/night.jpeg";
 			document.body.style.backgroundColor = "#ffc0cb";
 		}
 
