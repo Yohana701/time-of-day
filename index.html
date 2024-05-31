@@ -40,18 +40,50 @@
 		<h1 class="masthead">Time of Day</h1>
 	</header>
     <main>
-	 <header><h3>A JavaScript Project by YOUR NAME HERE</h3></header>
-	    <p>Explain what your page does and how it works here!</p>
-	  <img src="http://dummyimage.com/300x400" alt="Time of Day Image" class="flexible">
+	 <header><h3>A JavaScript Project by Yohana Gebregziabher</h3></header>
+	    <p id ="message">A text is going to show based on the time of the day.</p>
+	  <img src="http://dummyimage.com/300x400" alt="Time of Day Image" class="flexible" id="image">
      <footer>
-      <p><small>&copy; 2022 by 
-          YOUR NAME HERE, All Rights Reserved ~ 
+      <p><small>&copy; <span id="copyright"></span> by 
+          Yohana Gebregziabher, All Rights Reserved ~ 
           <a id="html-checker" href="#" target="_blank">Check HTML</a> ~ 
           <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
      </p>
     </footer>
   </main>
  <script>
+	 // Get current hour from system clock
+		var currentHour = new Date().getHours();
+
+	// Select elements to update
+		var messageElement = document.getElementById("message");
+		var imageElement = document.getElementById("image");
+		var copyrightElement = document.getElementById("copyright");
+
+	// Update content based on time of day
+		if (currentHour >= 5 && currentHour < 12) {
+			messageElement.textContent = "Good Morning!";
+			imageElement.src = "morning_image.jpg";
+			document.body.style.backgroundColor = "orange";
+		} else if (currentHour >= 12 && currentHour < 18) {
+			messageElement.textContent = "Good Afternoon!";
+			imageElement.src = "afternoon_image.jpg";
+			document.body.style.backgroundColor = "skyblue";
+		} else if (currentHour >= 18 && currentHour < 23) {
+			messageElement.textContent = "Good Evening!";
+			imageElement.src = "evening_image.jpg";
+			document.body.style.backgroundColor = "purple";
+		} else {
+			messageElement.textContent = "Good Night!";
+			imageElement.src = "night_image.jpg";
+			document.body.style.backgroundColor = "darkblue";
+		}
+
+	// Update copyright year dynamically
+	var currentYear = new Date().getFullYear();
+	copyrightElement.textContent = "© " + currentYear;
+
+    // Set HTML and CSS validator links
     document.getElementById("html-checker").setAttribute("href","https://validator.w3.org/nu/?doc=" + location.href);
     document.getElementById("css-checker").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);  
  </script>
