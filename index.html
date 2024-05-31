@@ -44,7 +44,7 @@
 	    <p id ="message">A text is going to show based on the time of the day.</p>
 	  <img src="http://dummyimage.com/300x400" alt="Time of Day Image" class="flexible" id="image">
      <footer>
-      <p><small>&copy; <span id="copyright"></span> by 
+      <p><small> <span id="copyright"></span> by 
           Yohana Gebregziabher, All Rights Reserved ~ 
           <a id="html-checker" href="#" target="_blank">Check HTML</a> ~ 
           <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
@@ -64,19 +64,19 @@
 		if (currentHour >= 5 && currentHour < 12) {
 			messageElement.textContent = "Good Morning!";
 			imageElement.src = "morning_image.jpg";
-			document.body.style.backgroundColor = "yellow";
+			document.body.style.backgroundColor = "#ffff00";
 		} else if (currentHour >= 12 && currentHour < 18) {
 			messageElement.textContent = "Good Afternoon!";
 			imageElement.src = "afternoon_image.jpg";
-			document.body.style.backgroundColor = "skyblue";
+			document.body.style.backgroundColor = "#87ceeb";
 		} else if (currentHour >= 18 && currentHour < 23) {
 			messageElement.textContent = "Good Evening!";
 			imageElement.src = "evening_image.jpg";
-			document.body.style.backgroundColor = "lightpurple";
+			document.body.style.backgroundColor = "#e6e6fa";
 		} else {
 			messageElement.textContent = "Good Night!";
 			imageElement.src = "night_image.jpg";
-			document.body.style.backgroundColor = "pink";
+			document.body.style.backgroundColor = "#ffc0cb";
 		}
 
 	// Update copyright year dynamically
