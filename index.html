@@ -56,9 +56,14 @@
  <script>
 	 // Get current hour from system clock
 		var currentHour = new Date().getHours();
+	 
+	  // Get current day of the week
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var currentDayOfWeek = days[new Date().getDay()];
 
 	// Select elements to update
 		var messageElement = document.getElementById("message");
+                var dayOfWeekElement = document.getElementById("dayOfWeek");
 		var imageElement = document.getElementById("image");
 		var copyrightElement = document.getElementById("copyright");
 
@@ -81,7 +86,10 @@
 			document.body.style.backgroundColor = "#ffc0cb";
 		}
 
-	// Update copyright year dynamically
+	// Update day of the week dynamically
+        dayOfWeekElement.textContent += currentDayOfWeek;
+	 
+	 // Update copyright year dynamically
 	var currentYear = new Date().getFullYear();
 	copyrightElement.textContent = "© " + currentYear;
 
